@@ -1,3 +1,10 @@
 import { Routes } from '@angular/router';
 
-export const routes: Routes = [];
+import { ExampleForm } from './modules/formModule/example-form.component';
+
+export const routes: Routes = [
+  {
+    path: 'free-money-form',
+    component: ExampleForm,
+  },
+];

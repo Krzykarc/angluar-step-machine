@@ -1,12 +1,17 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.html',
-  styleUrl: './app.css'
+  standalone: true,
+  imports: [RouterOutlet, RouterLink],
+  template: `
+    <main class="main">
+      Mega super zaawansowana aplikacja! WOW! SZOK! 
+      <a routerLink="/free-money-form">Zakładka: Wypróbuj za darmo!</a>
+    </main>
+    <router-outlet />
+  `
 })
 export class App {
-  protected readonly title = signal('angular-step-example');
 }
